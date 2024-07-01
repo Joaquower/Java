@@ -9,22 +9,16 @@ public class LMain {
         linkedlist.add(3);
         linkedlist.add(4);
         linkedlist.add(5);
+        linkedlist.add(10);
 
         System.out.println("La lista es: ");
         linkedlist.imprimir();
 
         linkedlist.remove(4);
-        linkedlist.remove(2);
 
-
-        System.out.println("set:  " + linkedlist.set(0, null));
-        System.out.println("get: " + linkedlist.get(3));
-        System.out.println("El elemento contiene un 15? " +linkedlist.contains(15));
-        System.out.println("Esta vacio?  " + linkedlist.isEmpty());
-        System.out.println("El tamaño del arreglo es: " + linkedlist.size());
-        linkedlist.clear();
-        System.out.println("El tamaño del arreglo es: " + linkedlist.size());
+        System.out.println("La lista es: ");
         linkedlist.imprimir();
+
 
     }
 }

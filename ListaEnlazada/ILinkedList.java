@@ -7,7 +7,7 @@ public interface ILinkedList<T> {
 
     boolean remove(T element);
 
-    T remove(int index) throws IndexOutOfBoundsException;
+    T remove2(int index) throws IndexOutOfBoundsException;
 
     T get(int index) throws IndexOutOfBoundsException;
 
