@@ -93,6 +93,7 @@ public class LinkedList<T> implements ILinkedList<T> {
     }
 
     public T remove2(int index){
+        
         return null;
     }
 

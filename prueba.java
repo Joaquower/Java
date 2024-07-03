@@ -16,16 +16,15 @@ public class prueba {
 
         //Menu
         boolean bandera =true;
-        System.out.println("Que deseas hacer?? ");
+        System.out.println("Que deseas hacer?? \n");
         while (bandera==true) {
-            System.out.println("Porfavor selecciona una opcion: \n A) Agregar una nueva persona \n B) Seleccionar persona existente \n C) Cerrar");
+            System.out.println("\nPorfavor selecciona una opcion: \n A) Agregar una nueva persona \n B) Seleccionar persona existente \n C) Cerrar");
             String seleccion = scanner.nextLine();
             switch (seleccion) {
                 case "A":
                     programa.agregar(scanner);
                     break;
                 case "B":
-                    
                     break;
                 case "C":
                     bandera=false;
@@ -54,7 +53,8 @@ public class prueba {
         }
     }
     
-    public void agregar( Scanner scanner){
+    
+    public void agregar(Scanner scanner){
         System.out.println("Porfavor ingrese el nombre de la nueva persona: ");
         String nombre = scanner.nextLine();
 
