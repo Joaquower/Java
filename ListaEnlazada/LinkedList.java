@@ -92,33 +92,92 @@ public class LinkedList<T> implements ILinkedList<T> {
         return false;
     }
 
-    public T remove2(int index){
-        
-        return null;
+    public T remove2(int index) {
+        if (index < 0 || head == null) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+    
+        Nodo<T> current = head;
+        Nodo<T> prev = null;
+    
+        // Si se elimina el primer nodo
+        if (index == 0) {
+            T data = head.data;
+            head = head.next;
+            return data;
+        }
+    
+        // Avanzar a la posición del índice
+        for (int i = 0; i < index; i++) {
+            if (current == null || current.next == null) {
+                throw new IndexOutOfBoundsException("Index out of bounds");
+            }
+            prev = current;
+            current = current.next;
+        }
+    
+        T data = current.data;
+        prev.next = current.next; // Salta el nodo en el índice
+        size--;
+    
+        return data;
     }
 
+    //mostrar el elemento del indice indicado
     public T get(int index){
-        return null;
+        if(index<0 || index>size){
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+
+        Nodo<T> current = head;
+        for(int i=0; i<index;i++){
+            current = current.next;
+        }
+        T dato = current.data;
+        return dato;
     }
 
+    //reemplazar en el indice marcado
     public T set(int index, T element){
+        if(index<0 || index>size){
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+
+        Nodo<T> current = head;
+        for(int i=0; i<index;i++){
+            current=current.next;
+        }
+        current.data = element;
+
         return null;
     }
 
     public int size(){
-        return 2;
+        return size;
     }
 
     public boolean isEmpty(){
-        return true;
+        if(size <= 0){
+            return true;
+        }
+        return false;
     }
 
     public boolean contains(T element){
-        return true;
+        Nodo<T> current = head;
+        for(int i=0; i<size;i++){
+            if(current.data == element){
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+
     }
 
     public void clear(){
-
+        head = null;
+        size=0;
     }
     public void imprimir(){
         Nodo<T> current = head;
