@@ -1,0 +1,40 @@
+%\documentclass[12pt,a4paper]{article} el tamaño normala en muchos lados
+\documentclass[letterpaper]{article} %  El tamaño de una hoja carta
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Mi ensayo}
+\author{Joaquin}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section*{Introduccion al LAT3X}
+\leftskip=15pt %sangria izquierda
+\rightskipp=0pt %sangria derecha
+\parindent=0pt %margenes de la sangria
+Hata aqui he aprendido que latex se maneja por secciones y subsecciones para colocar las cosas, igual hay que manejar muy bien los paquetes ya que se usan para todo, todo latex podria decirse que es la manipulacion de paquetes.
+
+De igual forma aprendi que despues de los paquetes se suele poner el titulo, auto y fecha del proyecto y esos datos los acomoda en la portada. El proyecto se inicia con un begin y se termina con un end.
+
+En VSC se utiliza ALT + Z para hacer que se acomode todo un texto en varias lineas para que lo puedas visualizar todo en vez de que se recorr a la derecha y se haga una super linea.
+
+De igual forma aprendi el uso de imagenes con la funcion figure, se pueden centrar y ajustar su tamaño y angulo.
+
+Tambien aprendi a crear listas no ordenadas con la funcion itemize.
+
+\subsection*{Subseccion 1}
+Hola este es el cuerpo de la primera subseccion.
+\begin{figure}[h]
+    \centering
+    \includegraphics*[with=0.5\textwidth,height=10,angle=0]{imagefile}
+    \caption{Descripcion de la imagen}
+\end{figure}
+\begin{itemize}
+    \item Elemento1
+    \item Elemento2
+    \item Elemento3
+    \item Elemento4
+\end{itemize}
+\end{document}
